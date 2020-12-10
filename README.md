@@ -3,12 +3,14 @@
 
 // can balance array3.....
 
-public boolean canBalance(int[] nums) {
+public boolean canBalance(int[] nums)
+{
   int tsum=0;int sum=0;int n=0;
   for(int i=0;i<=nums.length-1;i++)
   {
     sum=sum+nums[i];
   }
+  
   tsum=sum/2;
   for(int i=0;i<=nums.length-1;i++)
   {
@@ -39,3 +41,45 @@ public int[] squareUp(int n) {
   }
   return a;
 }
+
+
+
+class coprime
+{  
+	public static int co(int a,int b)
+  {
+	int c=0;
+	for(int i=2;i<=a && i<=b;i++)
+	{
+	if(a%i==0 && b%i==0)
+	c++;
+	}
+	return c;
+  }
+
+
+
+
+//co prime
+
+	public static int  check(int[] a)
+	{
+		int c=0;
+   
+     for(int i=0;i<a.length;i++)
+     {
+     for(int j=i;j<a.length;j++)
+      {
+     	if(co(a[i],a[j])==0)
+     		c++;
+      }
+	 }
+	 return c;
+    }
+	public static void main(String[] args)
+    {
+    	int[] array={4,20,8,9};
+		System.out.println(check(array));
+	}
+}
+
