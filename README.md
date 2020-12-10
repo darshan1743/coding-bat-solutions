@@ -85,3 +85,32 @@ class coprime
 	}
 }
 
+
+
+//nth occurance of a number
+
+
+class occu
+{
+    public static int search(int val,int a,int[] ar)
+	{
+	int c=0;
+       for(int i=0;i<ar.length;i++)
+      {
+      	if(ar[i]==val)
+      	{
+          c++;
+      	}
+      	if(c==a)
+      	return i;
+      }
+      return 0;
+	}
+	public static void main(String[] args)
+	 {
+	 	int[] arr={1,4,6,7,6,3,6};
+		System.out.println(search(6,2,arr));
+	}
+}
+
+
