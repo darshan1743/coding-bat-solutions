@@ -24,12 +24,15 @@ public boolean canBalance(int[] nums)
 
 //array3...squareup...
 
-public int[] squareUp(int n) {
+public int[] squareUp(int n)
+{
   int c=0; 
   int[] a=new int[n*n];
+  
   for(int i=0;i<n;i++)
   {
     int num=i+1;
+    
     for(int j=0;j<n-(i+1);j++)
       {
         a[c]=0;c++;
@@ -47,6 +50,7 @@ public int[] squareUp(int n) {
 class coprime
 {  
 	public static int co(int a,int b)
+	
   {
 	int c=0;
 	for(int i=2;i<=a && i<=b;i++)
@@ -56,8 +60,10 @@ class coprime
 	}
 	return c;
   }
+  
 
-	public static int  check(int[] a)
+      public static int  check(int[] a)
+	
 	{
 		int c=0;
    
@@ -71,10 +77,11 @@ class coprime
 	 }
 	 return c;
     }
+    
 	public static void main(String[] args)
-    {
+        {
     	int[] array={4,20,8,9};
-		System.out.println(check(array));
+        System.out.println(check(array));
 	}
 }
 
