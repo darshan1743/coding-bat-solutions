@@ -42,7 +42,7 @@ public int[] squareUp(int n) {
   return a;
 }
 
-
+//coprime
 
 class coprime
 {  
@@ -56,11 +56,6 @@ class coprime
 	}
 	return c;
   }
-
-
-
-
-//co prime
 
 	public static int  check(int[] a)
 	{
