@@ -169,6 +169,23 @@ public int maxMirror(int[] nums) {
 }
 
 
+//maxspan arrays 3
+public int maxSpan(int[] nums) {
+  int max=0;
+  for(int i=0;i<nums.length;i++)
+  {
+    for(int j=nums.length-1;j>=0;j--)
+    {
+      int c=0;
+      if(nums[i]==nums[j])
+      {
+        c=(i-j)+1;
+      }
+     max=Math.max(max,c);
+    }
+  }
+  return max;
+}
 
 
 
