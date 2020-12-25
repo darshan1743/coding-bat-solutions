@@ -190,3 +190,22 @@ public int maxSpan(int[] nums) {
 
 
 
+///count clumps arrays3
+public int countClumps(int[] nums) {
+  int max=0;
+  for(int i=0;i<nums.length;i++)
+  {
+    int a=i;int c=0;
+    while(a<nums.length&&nums[i]==nums[a])
+    {
+      c++;a++;
+    }
+    if(c>=2)
+    max++;
+    i=a-1;
+  }
+  return max;
+}
+
+
+
