@@ -129,6 +129,46 @@ public boolean either24(int[] nums) {
 }
 
 
+//linearin arrays3
+public boolean linearIn(int[] outer, int[] inner) {
+  int c=0;
+  for(int i=0;i<inner.length;i++)
+  {
+    for(int j=0;j<outer.length;j++)
+    {
+      if(inner[i]==outer[j])
+      {
+      c++;break;}
+    }
+  }
+  if(c==inner.length)
+  return true;
+  else 
+  return false;
+}
+
+
+
+//maxmirror arrays3
+public int maxMirror(int[] nums) {
+  int max=0;
+  for(int i=0;i<nums.length;i++)
+  {
+    for(int j=nums.length-1;j>=0;j--)
+    {
+      int c=0;
+      int a=i;int b=j;
+      while(a<nums.length && b>=0 && nums[a]==nums[b])
+      {
+        a++;b--;c++;
+      }
+        max=Math.max(max,c);
+    }
+  }
+  return max;
+}
+
+
 
 
 
